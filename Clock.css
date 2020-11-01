@@ -1,0 +1,140 @@
+body{
+    text-align: center;
+}
+
+.clock{
+    width: 500px;
+    height: 500px;
+    background: url("https://ibb.co/qgdMpBM") no-repeat center;
+    border: 30px solid #111;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+}
+.sec{
+    width: 5px;
+    height: 250px;
+    border-radius: 10px;
+    background: radial-gradient(black, red);
+    color: #fff;
+    line-height: 35px;
+    position: absolute;
+    left: 265px;
+    transform-origin: bottom;
+    animation: sec 60s linear infinite;
+    z-index: 3;}
+.min{
+    width: 10px;
+    height: 200px;
+    border-radius: 10px;
+    background: radial-gradient(black, blue);
+    color: #fff;
+    line-height: 35px;
+    position: absolute;
+    left: 265px;
+    top: 74px;
+    transform-origin: bottom;
+    animation: min 3600s linear infinite;
+    z-index: 2;
+}
+.hour{
+    width: 15px;
+    height: 150px;
+    border-radius: 10px;
+    background:black;
+    color: #fff;
+    line-height: 35px;
+    position: absolute;
+    left: 262px;
+    top: 125px;
+    transform-origin: bottom;
+    animation: hour 21600s linear infinite;
+    z-index: 1;
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    z-index: 0;
+}
+
+@keyframes sec{
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}
+@keyframes min{
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}
+@keyframes hour{
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
+}
+
+.one{
+    top: 36px;
+    right: 148px;
+}
+
+.two{
+    top: 128px;
+    right: 50px;
+}
+.three{
+    top: 250px;
+right: 8px;
+}
+.four{
+    bottom: 123px;
+right: 49px;
+}
+.five{
+    bottom: 42px;
+    right: 141px;
+}
+.six{
+    bottom: 5px;
+    left: 261px;
+}
+.seven{
+    bottom: 41px;
+    left: 145px;
+}
+
+.eight{
+    bottom: 123px;
+left: 50px;
+}
+.nine{
+    top: 250px;
+left: 8px;
+}
+.ten{
+    top: 125px;
+left: 45px;
+}
+.eleven{
+    top: 39px;
+left: 137px;
+}
+.twelve{
+    top: 5px;
+left: 250px;
+}
+
+.name{
+    color: white;
+    background: radial-gradient(red,yellow);
+    font-size: 3rem;
+    animation: SD 5s linear 2s infinite;
+}
+
+  @keyframes SD {
+        0%   {color: white;}
+        25%  {color: yellow;}
+        50%  {color: blue;}
+        100% {color: green;}
+      }
